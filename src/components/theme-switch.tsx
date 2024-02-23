@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
-  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+  const [isTooltipVisible, setIsTooltipVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -48,9 +48,10 @@ export default function ThemeSwitch() {
       onMouseLeave={() => setIsTooltipVisible(false)}
     >
       <button
-        className={`shortcut-btn fixed z-10 bottom-5 right-10  w-[4rem] h-[4rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950 ${
-          theme === "dark" ? "bg-[--darkblue]" : "bg-white"
-        }
+        className={`shortcut-btn fixed z-10 bottom-5 right-10  w-[4rem] h-[4rem] bg-opacity-80
+         backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full
+          flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all
+           dark:bg-gray-950 ${theme === "dark" ? "bg-[--darkblue]" : "bg-white"}
         ${isMobile ? "top-10" : "bottom-5"}
         `}
         onClick={toggleTheme}
@@ -105,6 +106,7 @@ export default function ThemeSwitch() {
           to={sideBarLeftSocials[0].link}
           target="_blank"
           rel="noopener noreferrer"
+          
         >
           <BsLinkedin />
         </Link>

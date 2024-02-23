@@ -23,8 +23,7 @@ export const useSectionInView = (
     ref,
   };
 };
-// hook
-// hook
+
 export const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
