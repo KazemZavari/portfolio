@@ -6,7 +6,7 @@ import { useSectionInView } from "../assets/lib/hooks";
 import { useActiveSectionContext } from "../context/active-section-context";
 import { useLanguage } from "../context/language-context";
 import { BsMouse } from "react-icons/bs";
-import ColorDiv from "./"
+import ColorDiv from "./ColorDiv";
 const HeaderIntro: React.FC = () => {
   const { language } = useLanguage();
   const { ref } = useSectionInView("Home", 0.5);
@@ -18,6 +18,7 @@ const HeaderIntro: React.FC = () => {
       ref={ref}
       id="home"
     >
+      <ColorDiv />
       <RadialGradient scale="scale-y-125" opacity="opacity-30" />
 
       <img
