@@ -6,7 +6,7 @@ import { useSectionInView } from "../assets/lib/hooks";
 import { useActiveSectionContext } from "../context/active-section-context";
 import { useLanguage } from "../context/language-context";
 import { BsMouse } from "react-icons/bs";
-
+import ColorDiv from "./"
 const HeaderIntro: React.FC = () => {
   const { language } = useLanguage();
   const { ref } = useSectionInView("Home", 0.5);
